@@ -8,7 +8,7 @@ Harris Corner Detector is a corner detection operator that is commonly used in c
 
 **Corner**
 A corner is a point whose local neighborhood stands in two dominant and different edge directions. In other words, a corner can be interpreted as the junction of two edges, where an edge is a sudden change in image brightness. Corners are the important features in the image, and they are generally termed as interest points which are invariant to translation, rotation, and illumination.
-![image](https://user-images.githubusercontent.com/79583184/198843966-5f89bb2f-b144-41c2-91f0-c81fcb31280e.png)  ![image](https://user-images.githubusercontent.com/79583184/198843984-3c83fb38-2007-40f2-8a3e-11dccf166745.png)  ![image](https://user-images.githubusercontent.com/79583184/198843993-4f2e5f3e-271e-4b7b-a9aa-2d2b561215a8.png)
+![image](https://user-images.githubusercontent.com/79583184/198843966-5f89bb2f-b144-41c2-91f0-c81fcb31280e.png)  
 
 
 So let's understand why corners are considered better features or good for patch mapping. If we take the flat region then no gradient change is observed in any direction. Similarly, in the edge region, no gradient change is observed along the edge direction. So both flat region and edge region are bad for patch matching since they not very distinctive (there are many similar patches in along edge in edge region). While in corner region we observe a significant gradient change in all direction. Due this corners are considered good for patch matching(shifting the window in any direction yield a large change in appearance) and generally more stable over the change of viewpoint.
