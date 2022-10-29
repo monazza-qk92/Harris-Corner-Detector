@@ -1,0 +1,22 @@
+PART- A
+
+Implement the Harris keypoint detector as discussed in the lectures. You do not need to implement a descriptor. Apply it to the two images provided and threshold the cornerness response so that about a few hundred keypoints are returned. Submit a result showing the (top-scoring) detected Harris keypoints superimposed on the original image (e.g., you can place a cross or a circle at the location of the keypoint; do this on the grayscale version to facilitate visualization). Report the threshold that you choose. Describe which objects or regions in the image seem to generate large numbers of Harris keypoints, and why. You may not use the built-in library function for Harris detection, but must implement it on your own.
+
+Programming platform: MATLAB
+
+The following built-in functions are used for computations:
+ im1 = imread('famous_five.png') for image reading
+ im = rgb2gray(image) for converting color image to grayscale
+ ix = conv2(double(im),dx,'same') for horizontal derivative
+ iy = conv2(double(im),dy,'same') for vertical derivative
+ PARAMETERS FOR GAUSSIAN FILTER
+sigma = 3
+order = 16 * 16
+ Ix2 = conv2(double(ix.^2),G,'same') for Ix^2
+ Iy2 = conv2(double(iy.^2),G,'same') for Iy^2
+ Ixy = conv2(double(ix.*iy),G,'same') for Ix*Iy
+ Threshold =4000
+ maximum_point = ordfilt2(r, order^2,ones(order)) filter for non-max suppression
+ Order of NMS filter =32 * 32
+ harris_corners = (r==maximum_point) & (r>threshold) for finding Corners
+
