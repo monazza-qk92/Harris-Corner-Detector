@@ -1,7 +1,7 @@
 # Harris-Corner-Detector
-CS-867  Computer Vision Assignment # 1 Spring 2021
+**CS-867  Computer Vision Assignment # 1 Spring 2021**
 
-Harris Keypoint Detector and its Robustness to Rotation and Scaling
+**Harris Keypoint Detector and its Robustness to Rotation and Scaling**
 
 Harris Corner Detector is a corner detection operator that is commonly used in computer vision algorithms to extract corners and infer features of an image.Harris’ corner detector takes the differential of the corner score into account with reference to direction directly, instead of using shifting patches for every 45-degree angles, and has been proved to be more accurate in distinguishing between edges and corners. 
 ![image](https://user-images.githubusercontent.com/79583184/198843910-d4e0657f-7cf6-4bfb-8102-5eb8757bcad1.png)
